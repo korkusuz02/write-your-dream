@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+{%block title%}Giriş yap{%endblock%}
+
+{%block content%}
+
+<section style="background-color: coral; height: 100vh;">
+    <div class="container" style="height: 100%;">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+            <form action="" method="post">
+                <label style="font-size: 2rem;" for="email">Email</label><br>
+                <input style="font-size: 2rem;" type="text" name="email"><br>
+                <label style="font-size: 2rem;" for="password">Parola</label><br>
+                <input style="font-size: 2rem;" type="text" name="password"><br><br>
+                <button class="btn btn-primary" type="submit">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{%block title%}Kaydol{%endblock%}
+
+{%block content%}
+
+<section style="background-color: coral; height: 100vh;">
+    <div class="container" style="height: 100%;">
+        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+            <form action="" method="post">
+                <label style="font-size: 2rem;" for="name">Ad</label><br>
+                <input style="font-size: 2rem;" type="text" name="name"><br>
+                <label style="font-size: 2rem;" for="surname">Soyad</label><br>
+                <input style="font-size: 2rem;" type="text" name="surname"><br>
+                <label style="font-size: 2rem;" for="email">Email</label><br>
+                <input style="font-size: 2rem;" type="text" name="email"><br>
+                <label style="font-size: 2rem;" for="password">Parola</label><br>
+                <input style="font-size: 2rem;" type="text" name="password"><br><br>
+                <button class="btn btn-primary" type="submit">Kaydol</button>
+                {% with messages=get_flashed_messages() %}
+                {%if messages%}
+                <ul classs="flashes">
+                    {%for message in messages%}
+                    <div  class="alert alert-primary" role="alert">
+                        {{message}}
+                    </div>
+                    {%endfor%}
+                </ul>
+                {%endif%}
+                {%endwith%}
+            </form>
+        </div>
+    </div>
+</section>
+
+{%endblock%}
